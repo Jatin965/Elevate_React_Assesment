@@ -1,38 +1,205 @@
 .App {
-  text-align: center;
+  font-family: Poppins sans-serif;
+  background: linear-gradient(135deg, white 0%, #EAD1C7 3%, white 20%, white 70%, #F1E2DE 90%)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 120px;
+  font-family: Poppins;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header .logo {
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150%;
+}
+
+.header .menu ul li {
+  color: black;
+  opacity: 0.6;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.header .menu ul li.active {
+  opacity: 1;
+}
+
+
+.header .menu ul li.active span {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #FF3366;
+  position:absolute;
+  transform: rotate(180deg);
+  top: 50px;
+  transition: all 200ms ease-out;
+}
+
+.header .menu ul li:hover,
+.header .btns a:hover,
+.header .btns button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
+.header .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
+
+.header .btns button {
+  padding: 10px 25px;
+  background-color: #FF3366;
   color: white;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/* BANNER  */
+.banner {
+  width: 80vw;
+  margin: 30px auto;
+  font-family: Poppins;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner .body {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.banner .body .content {
+  max-width: 40%;
+}
+
+.banner .body .content h1 {
+  font-size: 65px;
+  font-weight: 600;
+  color: #17191d;
+  line-height: 75px;
+}
+
+.banner .body .content h1 span {
+  color: #ff3366;
+  line-height: 75px;
+}
+
+.banner .body .content p {
+  color: #4a4e57;
+  margin: 25px 0;
+  width: 80%;
+}
+
+.banner .body .content button {
+  background: #17191d;
+  color: white;
+  border: 1px solid #17191d;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.banner .body .content button:hover {
+  background: white;
+  color: #17191d;
+  cursor: pointer;
+  
+}
+
+.banner .body .content img {
+  position: absolute;
+  max-width: 80px;
+  height: auto;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+
+.banner .body .content .line1 {
+  position: absolute;
+  left: -10px;
+  bottom: 18%;
+  width: 180px;
+  transform: rotate(15deg);
+}
+
+.banner .body .content .line2 {
+  position: absolute;
+  left: -15px;
+  bottom: 0%;
+  width: 190px;
+  transform: rotate(-25deg);
+  overflow: hidden;
+}
+
+.banner .body .content .line1 .line {
+  height: 2px;
+  width: 180px;
+  background: lightgrey;
+  margin: 25px 0;
+}
+
+.banner .body .content .line1 .line-a {
+  margin-left: -10px;
+}
+.banner .body .content .line1 .line-b {
+  margin-left: -5px;
+}
+
+.banner .body .content .line2 .line {
+  height: 2px;
+  width: 190px;
+  background: lightgrey;
+  margin: 17px 0;
+}
+
+.banner .body .content .line2 .line-a {
+  margin-left: -15px;
+}
+.banner .body .content .line2 .line-b {
+  margin-left: -10px;
+}
+
+.banner .body img {
+  max-width: 40%;
+  height: auto;
+}
+
+
+
+/* FOOTER */
+.footer {
+  width: 70vw;
+  margin: 50px auto 0 auto;
+  padding-bottom: 30px;
+}
+
+.footer-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.footer img {
+  max-width: 200px;
+  height: auto;
+  filter: grayscale(100%);
 }
